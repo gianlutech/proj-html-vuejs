@@ -8,7 +8,9 @@
             <a :href="link.url">{{ link.text }}</a>
           </li>
           <li><button class="secondary-button">JOIN US</button></li>
-          <li><i class="fas fa-search"></i></li>
+          <li>
+            <a><i class="fas fa-search"></i></a>
+          </li>
         </ul>
       </nav>
     </div>
