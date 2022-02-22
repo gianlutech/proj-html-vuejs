@@ -44,13 +44,6 @@ export default {
         text-decoration: none;
         color: white;
       }
-      .secondary-button {
-        background-color: black;
-        padding: 5px 15px;
-        color: white;
-        border-radius: 2px;
-        border: 0;
-      }
     }
   }
 }

@@ -43,3 +43,16 @@
   .bg-red{
       background-color: #CD201F;
   }
+  .bg-black{
+      background-color: black;
+  }
+  .secondary-button {
+    background-color: black;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 2px;
+    border: 0;
+    &:hover{
+        background-color: #FC8C5E;
+    }
+  }

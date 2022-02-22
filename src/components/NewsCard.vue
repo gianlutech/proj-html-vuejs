@@ -16,7 +16,8 @@ export default {
 
 <style lang="scss" scoped>
 .news-card {
-  flex-basis: 33%;
+  flex-basis: 30%;
   font-size: 12px;
+  margin: 10px;
 }
 </style>

@@ -3,12 +3,31 @@
     <IntroForum />
     <Description />
     <Title :news="news" :prenews="prenews" />
-    <section id="news-cards" class="container">
+    <section class="cards container">
       <NewsCard
         v-for="(product, index) in products"
         :key="index"
         :product="product"
       />
+      <Jumbo />
+      <NewsCard
+        v-for="(product, index) in products"
+        :key="index"
+        :product="product"
+      />
+    </section>
+    <Banner />
+    <section class="forum section bg-grey">
+      <div class="container">
+        <Title :news="news" :prenews="prenews" />
+        <div class="forum-cards cards">
+          <ForumCard
+            v-for="(forum, index) in forums"
+            :key="index"
+            :forum="forum"
+          />
+        </div>
+      </div>
     </section>
   </div>
 </template>
@@ -18,6 +37,9 @@ import IntroForum from "./IntroForum.vue";
 import Description from "./Description.vue";
 import NewsCard from "./NewsCard.vue";
 import Title from "./Title.vue";
+import Jumbo from "./Jumbo.vue";
+import Banner from "./Banner.vue";
+import ForumCard from "./ForumCard.vue";
 export default {
   name: "Main",
   components: {
@@ -25,6 +47,9 @@ export default {
     Description,
     Title,
     NewsCard,
+    Jumbo,
+    Banner,
+    ForumCard,
   },
 
   data() {
@@ -34,22 +59,59 @@ export default {
 
       products: [
         {
-          image: "../assets/images/post_feat_img_25-700x441.jpg",
+          image: require("../assets/images/post_feat_img_25-320x202.jpg"),
           title: "Morbi vitae dui euismod vulputate sollicitudin",
           date: "October 11th, 2015 | 2 Comments",
           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis cupiditate recusandae dolor quod, consectetur explicabo qui, ipsa quasi quisquam corporis ab? Rem dicta voluptatibus doloribus deserunt blanditiis ex? Esse, ab?",
         },
+
         {
-          image: "../assets/images/post_feat_img_24-700x441.jpg",
+          image: require("../assets/images/post_feat_img_25-320x202.jpg"),
           title: "Morbi vitae dui euismod vulputate sollicitudin",
           date: "October 11th, 2015 | 2 Comments",
           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis cupiditate recusandae dolor quod, consectetur explicabo qui, ipsa quasi quisquam corporis ab? Rem dicta voluptatibus doloribus deserunt blanditiis ex? Esse, ab?",
         },
+
         {
-          image: "../assets/images/post_feat_img_23-700x441.jpg",
+          image: require("../assets/images/post_feat_img_25-320x202.jpg"),
           title: "Morbi vitae dui euismod vulputate sollicitudin",
           date: "October 11th, 2015 | 2 Comments",
           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis cupiditate recusandae dolor quod, consectetur explicabo qui, ipsa quasi quisquam corporis ab? Rem dicta voluptatibus doloribus deserunt blanditiis ex? Esse, ab?",
+        },
+      ],
+
+      forums: [
+        {
+          icon: "",
+          text: "News & Community",
+        },
+        {
+          icon: '<font-awesome-icon icon="fas fa-file-alt" />',
+          text: "News & Community",
+        },
+        {
+          icon: '<font-awesome-icon icon="fas fa-file-alt" />',
+          text: "News & Community",
+        },
+        {
+          icon: '<font-awesome-icon icon="fas fa-file-alt" />',
+          text: "News & Community",
+        },
+        {
+          icon: '<font-awesome-icon icon="fas fa-file-alt" />',
+          text: "News & Community",
+        },
+        {
+          icon: '<font-awesome-icon icon="fas fa-file-alt" />',
+          text: "News & Community",
+        },
+        {
+          icon: '<font-awesome-icon icon="fas fa-file-alt" />',
+          text: "News & Community",
+        },
+        {
+          icon: '<font-awesome-icon icon="fas fa-file-alt" />',
+          text: "News & Community",
         },
       ],
     };
@@ -58,7 +120,7 @@ export default {
 </script>
 
 <style lang="scss">
-#news-cards {
+.cards {
   display: flex;
   flex-wrap: wrap;
 }
