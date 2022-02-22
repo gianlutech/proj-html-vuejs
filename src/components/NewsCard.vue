@@ -1,7 +1,7 @@
 <template>
   <div class="news-card">
     <img :src="product.image" :alt="product.title" />
-    <h6>{{ product.title }}</h6>
+    <h6 class="my-2">{{ product.title }}</h6>
     <address>{{ product.date }}</address>
     <p>{{ product.text }}</p>
   </div>

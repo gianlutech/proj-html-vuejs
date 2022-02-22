@@ -29,6 +29,13 @@
         </div>
       </div>
     </section>
+    <Banner />
+    <section class="community">
+      <CommunityJumbo />
+    </section>
+    <section class="sub bg-grey py-5 text-center">
+      <Subscribe />
+    </section>
   </div>
 </template>
 
@@ -40,6 +47,8 @@ import Title from "./Title.vue";
 import Jumbo from "./Jumbo.vue";
 import Banner from "./Banner.vue";
 import ForumCard from "./ForumCard.vue";
+import CommunityJumbo from "./CommunityJumbo.vue";
+import Subscribe from "./Subscribe.vue";
 export default {
   name: "Main",
   components: {
@@ -50,6 +59,8 @@ export default {
     Jumbo,
     Banner,
     ForumCard,
+    CommunityJumbo,
+    Subscribe,
   },
 
   data() {
@@ -66,14 +77,14 @@ export default {
         },
 
         {
-          image: require("../assets/images/post_feat_img_25-320x202.jpg"),
+          image: require("../assets/images/post_feat_img_24-320x202.jpg"),
           title: "Morbi vitae dui euismod vulputate sollicitudin",
           date: "October 11th, 2015 | 2 Comments",
           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis cupiditate recusandae dolor quod, consectetur explicabo qui, ipsa quasi quisquam corporis ab? Rem dicta voluptatibus doloribus deserunt blanditiis ex? Esse, ab?",
         },
 
         {
-          image: require("../assets/images/post_feat_img_25-320x202.jpg"),
+          image: require("../assets/images/post_feat_img_23-320x202.jpg"),
           title: "Morbi vitae dui euismod vulputate sollicitudin",
           date: "October 11th, 2015 | 2 Comments",
           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis cupiditate recusandae dolor quod, consectetur explicabo qui, ipsa quasi quisquam corporis ab? Rem dicta voluptatibus doloribus deserunt blanditiis ex? Esse, ab?",
@@ -123,5 +134,12 @@ export default {
 .cards {
   display: flex;
   flex-wrap: wrap;
+}
+.community {
+  background-image: url("../assets/images/join_now_cta_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 400px;
 }
 </style>
