@@ -93,7 +93,7 @@ export default {
 
       forums: [
         {
-          icon: "",
+          icon: "http://www.w3.org/2000/svg",
           text: "News & Community",
         },
         {
